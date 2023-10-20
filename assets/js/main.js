@@ -163,3 +163,49 @@ modalCall.forEach((el) => el.addEventListener("click", openModal));
 modalClose.addEventListener("click", closeModal);
 modal.addEventListener("click", closeModal);
 modalContent.addEventListener("click", (e) => e.stopPropagation());
+
+// FORM SUBMIT
+const formEl = document.querySelectorAll("form");
+
+formEl.forEach((form) => {
+  let nameValue = form.querySelector(".name");
+  let lastnameValue = form.querySelector(".lastname");
+  let emailValue = form.querySelector(".email");
+  let phoneValue = form.querySelector(".phone");
+  let requiredFields = form.querySelectorAll(".required-fields");
+
+  const formReset = () => {
+    nameValue.value = "";
+    lastnameValue.value = "";
+    emailValue.value = "";
+    phoneValue.value = "";
+  };
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (
+      nameValue.value != "" &&
+      lastnameValue.value != "" &&
+      emailValue.value != "" &&
+      phoneValue.value != ""
+    ) {
+      window.location.href = "thankyou.html";
+      formReset();
+    } else {
+      requiredFields.forEach((e) => {
+        e.classList.add("visible");
+      });
+    }
+  });
+
+  const inputFields = form.querySelectorAll(".name, .lastname, .email, .phone");
+  for (let inputItem of inputFields) {
+    inputItem.addEventListener("focus", function () {
+      requiredFields.forEach((e) => {
+        if (e.classList.contains("visible")) {
+          e.classList.remove("visible");
+        }
+      });
+    });
+  }
+});

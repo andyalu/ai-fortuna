@@ -1,56 +1,3 @@
-<?php
-include_once 'config.php';
-
-if (isset($_POST["phone"])) {
-    $curl = curl_init();
-    $post = [
-        "first_name" => $_POST["first_name"],
-        "last_name" => $_POST["last_name"],
-        "email" => $_POST["email"],
-        "phone" => $_POST["phone"],
-        "ip" => $_POST["ip"],
-        "additional_info" => $_POST["additional_info"],
-        "land_id" => $land_id,
-        "affiliate" => $affiliate,
-        "source_url" => $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
-        "sub_1" => $_GET["sub_1"],
-        "sub_2" => $_GET["sub_2"],
-        "sub_3" => $_GET["sub_3"],
-        "sub_4" => $_GET["sub_4"],
-        "sub_5" => $_GET["sub_5"],
-        "test" => $_GET["test"]
-    ];
-
-    curl_setopt_array($curl, [
-        CURLOPT_URL => "https://api.unit.partners/api/v1/api-lead/create",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $post,
-        CURLOPT_HTTPHEADER => [
-            "token: $token"
-        ]
-    ]);
-
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
-
-    curl_close($curl);
-
-    $data = json_decode($response);
-    $autologin = $data->result->redirectUrl;
-
-    if ($autologin !== '') {
-        header('refresh:3;url=' . $autologin);
-    } else {
-        header('refresh:3;');
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,6 +64,7 @@ if (isset($_POST["phone"])) {
     <img src="assets/img/svg/header-logo.svg" alt="logo" class="logo-img">
     <h2>Thank you for registration!</h2>
     <p>Our Agent will contact you shortly.<br/> Please make sure that you used the actual phone number.<br/> Cheers.</p>
+    <a href="index.html" style="display:inline-block;color:inherit;margin-top:2rem;">Back</a>
   </div>
 </body>
 </html>
