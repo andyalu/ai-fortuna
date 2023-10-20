@@ -1,0 +1,122 @@
+<?php
+include_once 'config.php';
+
+if (isset($_POST["phone"])) {
+    $curl = curl_init();
+    $post = [
+        "first_name" => $_POST["first_name"],
+        "last_name" => $_POST["last_name"],
+        "email" => $_POST["email"],
+        "phone" => $_POST["phone"],
+        "ip" => $_POST["ip"],
+        "additional_info" => $_POST["additional_info"],
+        "land_id" => $land_id,
+        "affiliate" => $affiliate,
+        "source_url" => $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+        "sub_1" => $_GET["sub_1"],
+        "sub_2" => $_GET["sub_2"],
+        "sub_3" => $_GET["sub_3"],
+        "sub_4" => $_GET["sub_4"],
+        "sub_5" => $_GET["sub_5"],
+        "test" => $_GET["test"]
+    ];
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.unit.partners/api/v1/api-lead/create",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => $post,
+        CURLOPT_HTTPHEADER => [
+            "token: $token"
+        ]
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    $data = json_decode($response);
+    $autologin = $data->result->redirectUrl;
+
+    if ($autologin !== '') {
+        header('refresh:3;url=' . $autologin);
+    } else {
+        header('refresh:3;');
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations!</title>
+  <link rel="shortcut icon" href="assets/img/favicon/favicon.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="assets/img/favicon/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          width: 100%;
+          min-height: 100vh;
+          padding: 2rem 0;
+          overflow-x: hidden;
+          display: grid;
+          place-items: center center;
+          background: #303030 url('assets/img/hero-bg.png') no-repeat center / cover;
+          font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            backdrop-filter: blur(12px);
+        }
+
+      .container {
+          width: 90%;
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: center;
+      }
+
+      .logo-img {
+          display: block;
+          width: 90%;
+          max-width: 220px;
+          margin: 0 auto;
+      }
+
+      h2 {
+          font-size: 2rem;
+          text-align: center;
+          margin: 2rem 0 1rem 0;
+          font-weight: 800;
+          color: #0bae24;
+          text-shadow: 0 2px 4px #111;
+      }
+
+      p {
+          font-size: 1.2rem;
+          text-align: center;
+          font-weight: 600;
+          line-height: 150%;
+          color: #fff;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/img/svg/header-logo.svg" alt="logo" class="logo-img">
+    <h2>Thank you for registration!</h2>
+    <p>Our Agent will contact you shortly.<br/> Please make sure that you used the actual phone number.<br/> Cheers.</p>
+  </div>
+</body>
+</html>

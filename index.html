@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AI Fortuna</title>
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.png" type="image/png"/>
+    <link rel="apple-touch-icon" href="assets/img/favicon/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <main class="main">
+            <section class="hero-section" id="hero">
+                <div class="header" id="header">
+                    <div class="container flex center just-between">
+                        <img src="assets/img/svg/header-logo.svg" onclick="scrollToElem('#hero')" alt="Logo" width="185" height="48" class="header-logo-img" loading="lazy">
+                        <div class="control-panel flex center">
+                            <nav class="navigation">
+                                <ul class="nav-list flex center">
+                                    <li>
+                                        <a href="javascript:void(0);" onclick="scrollToElem('#about')">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" onclick="scrollToElem('#projects')">Offers</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" onclick="scrollToElem('#advantages')"> Why choose us</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" onclick="scrollToElem('#steps')">Invest now</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" onclick="scrollToElem('#contact')">Join us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-widget-group flex center">
+                                <button class="btn modal-call">
+                                    Sign&nbsp;in
+                                </button>
+                                <button class="btn modal-call">
+                                    Sign&nbsp;up
+                                </button>
+                            </div>
+                            <div class="menu-btn-wrapper mob-only">
+                                <img src="assets/img/hamburger.png" width="32" height="32" alt="Menu" class="menu-btn-img" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-section-bg"></div>
+                <div class="container content flex center just-between">
+                    <div class="hero-content">
+                        <h1 class="main-heading reveal to-right">
+                            <span class="text-colored">Make Money</span> Your Way
+                        </h1>
+                        <div class="text-wrapper text-white reveal to-right delay-01">
+                            We present a unique investment platform that is now available to you. Our users have access to a wide range of investment opportunities including commodity markets, exchanges, and cryptocurrencies. Our goal is to make investing accessible to everyone.
+                        </div>
+                        <div class="hero-card flex-inl center reveal to-right delay-02">
+                            <img src="assets/img/svg/medal.svg" class="hero-card-icon" width="80" height="80" alt="Medal" loading="lazy">
+                            <div class="rating-group text-center">
+                                <div class="rating-value">
+                                    4.5
+                                </div>
+                                <img src="assets/img/svg/rating-stars.svg" alt="Rating Stars" class="rating-stars-img" loading="lazy">
+                            </div>
+                            <p class="section-text">
+                                Offer rating by <br>
+                                Worldwide Investment <br> 
+                                Platform.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-wrapper reveal to-left delay-01">
+                        <div class="form">
+                            <div class="message">
+                                Introducing AiFortuna - your path to successful investments! 
+                            </div>
+                            <h2 class="form-heading">
+                                Registration
+                            </h2>
+                            <div class="app" id="app1" data-type="2" data-geo="EU" data-url="<?php echo $conv_page ?>" data-butt="Sign in"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="projects-section" id="projects">
+                <div class="container">
+                    <h2 class="section-heading text-center reveal to-right">
+                        Our investment assets.
+                    </h2>
+                    <div class="cards-wrapper flex just-between">
+                        <div class="card projects-card card-001 reveal to-right delay-01">
+                            <div class="bg-img-holder"></div>
+                            <div class="inner text-white flex column center just-center">
+                                <div class="message text-center">
+                                    Guaranteed payments: from 37% monthly.
+                                </div>
+                                <h4>
+                                    COMMODITY MARKET
+                                </h4>
+                                <p class="card-text">
+                                    Energy/Oil & Gas/Silver & Gold
+                                </p>
+                                <button class="btn modal-call">
+                                    Registration
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card projects-card card-002 reveal to-right delay-02">
+                            <div class="bg-img-holder"></div>
+                            <div class="inner text-white flex column center just-center">
+                                <div class="message text-center">
+                                    Stable income: from $3.000 monthly.
+                                </div>
+                                <h4>
+                                    TRADITIONAL MARKET
+                                </h4>
+                                <p class="card-text">
+                                    Stocks/Bonds/Securities
+                                </p>
+                                <button class="btn modal-call">
+                                    Registration
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card projects-card card-003 reveal to-right delay-03">
+                            <div class="bg-img-holder"></div>
+                            <div class="inner text-white flex column center just-center">
+                                <div class="message text-center">
+                                    High-yielding asset: from 67% monthly.
+                                </div>
+                                <h4>
+                                    CRYPTO-MARKET
+                                </h4>
+                                <p class="card-text">
+                                    Digital Currencies/Stablecoins
+                                </p>
+                                <button class="btn modal-call">
+                                    Registration
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section" id="about">
+                <div class="container flex center just-center">
+                    <div class="img-part reveal to-right delay-02">
+                        <img src="assets/img/about-img.png" alt="Man working on computer" class="about-img" loading="lazy">
+                    </div>
+                    <div class="text-part">
+                        <h2 class="section-heading reveal to-left">
+                            CEO AiFortuna
+                        </h2>
+                        <div class="row flex center">
+                            <div class="row-item flex center reveal to-left delay-01">
+                                <img src="assets/img/svg/about-001.svg" width="56" height="56" alt="Icon" loading="lazy">
+                                <p>Data Security</p>
+                            </div>
+                            <div class="row-item flex center reveal to-left delay-02">
+                                <img src="assets/img/svg/about-002.svg" width="56" height="56" alt="Icon" loading="lazy">
+                                <p>24/7 support</p>
+                            </div>
+                            <div class="row-item flex center reveal to-left delay-03">
+                                <img src="assets/img/svg/about-003.svg" width="56" height="56" alt="Icon" loading="lazy">
+                                <p>Personalized<br> approach</p>
+                            </div>
+                        </div>
+                        <p class="section-text reveal to-left delay-04">
+                            “AiFortuna is a unique multi-asset trading platform that combines the advice of experienced traders and advanced artificial intelligence algorithms. It allows our clients to stay ahead of market signals and make informed investment decisions. Our goal is to provide you with a stable income and a successful investment experience.”
+                        </p>
+                        <div class="btn-wrapper reveal to-left delay-05">
+                            <button class="btn modal-call">
+                                Registration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages-section" id="advantages">
+                <div class="container">
+                    <h2 class="section-heading text-white text-center reveal to-right">
+                        Why Choose AiFortuna?
+                    </h2>
+                    <div class="cards-wrapper flex wrap just-between">
+                        <div class="card advantages-card reveal to-right delay-01">
+                            <div class="card-header flex center">
+                                <div class="number flex center just-center">1</div>
+                                <img src="assets/img/svg/advantages-001.svg" width="72" height="72" alt="Advantage Icon" loading="lazy">
+                            </div>
+                            <h4>
+                                Team of Professionals
+                            </h4>
+                            <p class="card-text">
+                                Experienced and qualified professionals who are ready to assist clients in investing.
+                            </p>
+                        </div>
+                        <div class="card advantages-card reveal to-right delay-02">
+                            <div class="card-header flex center">
+                                <div class="number flex center just-center">2</div>
+                                <img src="assets/img/svg/advantages-002.svg" width="72" height="72" alt="Advantage Icon" loading="lazy">
+                            </div>
+                            <h4>
+                                Multi-Asset Platform
+                            </h4>
+                            <p class="card-text">
+                                The ability to invest in various types of assets, including Forex, commodities, stocks, and cryptocurrencies.
+                            </p>
+                        </div>
+                        <div class="card advantages-card reveal to-right delay-03">
+                            <div class="card-header flex center">
+                                <div class="number flex center just-center">3</div>
+                                <img src="assets/img/svg/advantages-003.svg" width="72" height="72" alt="Advantage Icon" loading="lazy">
+                            </div>
+                            <h4>
+                                Guaranteed Payouts
+                            </h4>
+                            <p class="card-text">
+                                Ensuring a stable passive income and reliable payouts to clients.
+                            </p>
+                        </div>
+                        <div class="card advantages-card reveal to-right delay-04">
+                            <div class="card-header flex center">
+                                <div class="number flex center just-center">4</div>
+                                <img src="assets/img/svg/advantages-004.svg" width="72" height="72" alt="Advantage Icon" loading="lazy">
+                            </div>
+                            <h4>
+                                Artificial Intelligence
+                            </h4>
+                            <p class="card-text">
+                                Advanced artificial intelligence algorithms that assist in making informed investment decisions.
+                            </p>
+                        </div>
+                        <div class="card advantages-card reveal to-right delay-05">
+                            <div class="card-header flex center">
+                                <div class="number flex center just-center">5</div>
+                                <img src="assets/img/svg/advantages-005.svg" width="72" height="72" alt="Advantage Icon" loading="lazy">
+                            </div>
+                            <h4>
+                                Accessibility for Different Types of Clients
+                            </h4>
+                            <p class="card-text">
+                                Efficient investment options for both beginners and experienced investors.
+                            </p>
+                        </div>
+                        <div class="card advantages-card reveal to-right delay-06">
+                            <div class="card-header flex center">
+                                <div class="number flex center just-center">6</div>
+                                <img src="assets/img/svg/advantages-006.svg" width="72" height="72" alt="Advantage Icon" loading="lazy">
+                            </div>
+                            <h4>
+                                Customer Support
+                            </h4>
+                            <p class="card-text">
+                                24/7 customer support for answering questions and resolving issues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="calculator-section" id="calculator">
+                <div class="container">
+                    <h2 class="section-heading text-center centered reveal to-right">
+                        Calculate <span>potential profits</span>
+                    </h2>
+                    <div class="row flex center just-center">
+                        <div class="calculator-wrapper reveal to-right delay-01">
+                            <p class="section-text text-center">
+                                Enter the amount you plan to invest and the time you want to receive the potential profit within
+                            </p>
+                            <div class="slider-wrapper">
+                                <div class="range-input-wrapper centered">
+                                    <div class="range-input-holder">
+                                        <input type="range" min="10" max="120" value="30" class="months-input" id="monthsInput">
+                                        <div class="slider-thumb months">
+                                            <span id="monthsValue"></span>&nbsp;month
+                                        </div>
+                                        <div class="range-progress-line months"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-wrapper">
+                                <div class="range-input-wrapper centered">
+                                    <div class="range-input-holder">
+                                        <input type="range" min="250" max="10000" value="500" class="months-input" id="investInput">
+                                        <div class="slider-thumb invest">
+                                            €&nbsp;<span id="investValue"></span>
+                                        </div>
+                                        <div class="range-progress-line invest"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="range-output-wrapper flex center just-center">
+                                <h4>
+                                    Total profit:
+                                </h4>
+                                <div class="range-output-value">
+                                    €&nbsp;<span id="earnResult">67 000</span> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-wrapper">
+                            <div class="stats-item reveal to-right delay-01">
+                                <h4>
+                                    Total users profit:
+                                </h4>
+                                <p>
+                                    <span id="usersProfit">128,567,000</span>&nbsp;€
+                                </p>
+                            </div>
+                            <div class="stats-item reveal to-right delay-02">
+                                <h4>
+                                    Active users:
+                                </h4>
+                                <p>
+                                    <span id="usersActive">77,335</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="steps-section" id="steps">
+                <div class="container">
+                    <div class="heading-group centered text-center">
+                        <h2 class="section-heading reveal to-right">
+                            TAKE <span>JUST 3 STEPS</span> TO YOUR FINANCIAL FREEDOM
+                        </h2>
+                        <p class="section-text reveal to-right delay-01">
+                            Signing up is quick and easy, and you can start trading in no time.
+                        </p>
+                    </div>
+                    <div class="cards-wrapper flex just-between">
+                        <div class="card steps-card reveal to-right delay-01">
+                            <img src="assets/img/svg/steps-001.svg" width="64" height="64" alt="Steps Icon" loading="lazy">
+                            <h4>
+                                Contact
+                            </h4>
+                            <p class="card-text">
+                                Fill in the registration form: First name, Last name, E-Mail, Phone number
+                            </p>
+                        </div>
+                        <div class="card steps-card reveal to-right delay-02">
+                            <img src="assets/img/svg/steps-002.svg" width="64" height="64" alt="Steps Icon" loading="lazy">
+                            <h4>
+                                Call 
+                            </h4>
+                            <p class="card-text">
+                                Receive a call from a manager. You will be contacted from 10:00 to 18:00 on workdays
+                            </p>
+                        </div>
+                        <div class="card steps-card reveal to-right delay-03">
+                            <img src="assets/img/svg/steps-003.svg" width="64" height="64" alt="Steps Icon" loading="lazy">
+                            <h4>
+                                Deposit
+                            </h4>
+                            <p class="card-text">
+                                Deposit the desired amount into your account (minimum amount is $250) and enjoy a stable income
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-section" id="contact">
+                <div class="container flex center just-between">
+                    <div class="text-part">
+                        <img src="assets/img/svg/header-logo.svg" onclick="scrollToElem('#hero')" alt="Logo" width="185" height="48" class="header-logo-img" loading="lazy">
+                        <h2 class="section-heading text-white reveal to-right">
+                            Invest in your own future with our innovative investment platform
+                        </h2>
+                        <p class="section-text text-white reveal to-right delay-01">
+                            Change your financial future with our expert advice and best investment offers. Don't wait a single day to take control of your financial future. Join AiFortuna and start earning a stable income today.
+                        </p>
+                    </div>
+                    <div class="form-wrapper reveal to-left delay-01">
+                        <div class="form">
+                            <div class="message">
+                                Introducing AiFortuna - your path to successful investments! 
+                            </div>
+                            <h2 class="form-heading">
+                                Registration
+                            </h2>
+                            <div class="app" id="app1" data-type="2" data-geo="EU" data-url="<?php echo $conv_page ?>" data-butt="Sign in"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" id="footer">
+                    <div class="container flex center just-between">
+                        <div class="copyright text-white">
+                            <span class="year">2023</span> AiFortuna  All Right Reserved
+                        </div>
+                        <div class="footer-links flex center">
+                            <a href="javascript:void(0)" data-name="policy" class="alterlink">Privacy Policy</a>
+                            <a href="javascript:void(0)" data-name="terms" class="alterlink">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="close-btn flex center"></div>
+            <h2 class="section-heading text-center centered">
+                What we can offer our customers
+            </h2>
+            <div class="row flex center just-center">
+                <div class="text-part">
+                    <div class="cards-wrapper">
+                        <div class="card offer-card">
+                            <div class="card-header flex center">
+                                <img src="assets/img/svg/steps-002.svg" width="56" height="56" alt="Offer card icon" loading="lazy">
+                                <h4>Personal manager</h4>
+                            </div>
+                            <p class="card-text">
+                                When you talk to our personal manager, you will receive individualized advice and understand which investments are most interesting to you. Our qualified specialists will help you find the best solutions for your portfolio.
+                            </p>
+                        </div>
+                        <div class="card offer-card">
+                            <div class="card-header flex center">
+                                <img src="assets/img/svg/medal.svg" width="56" height="56" alt="Offer card icon" loading="lazy">
+                                <h4>Your best choice</h4>
+                            </div>
+                            <p class="card-text">
+                                Find out what resources are available for investment. Our experts know the market like the back of their hands and will provide you with information about potential opportunities for your investment.
+                            </p>
+                        </div>
+                        <div class="card offer-card">
+                            <div class="card-header flex center">
+                                <img src="assets/img/svg/clients.svg" width="56" height="56" alt="Offer card icon" loading="lazy">
+                                <h4>To our clients</h4>
+                            </div>
+                            <p class="card-text">
+                                Our clients' long-term experience proves our reliability and efficiency. More than six months and more, more than 10 portfolios - this is only a part of our clients' achievements. Join our large team of satisfied investors and start building your financial future with us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <div class="form">
+                        <h2 class="form-heading">
+                            Registration
+                        </h2>
+                        <div class="app" id="app1" data-type="2" data-geo="EU" data-url="<?php echo $conv_page ?>" data-butt="Sign in"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE MENU -->
+    <nav class="mob-menu mob-only">
+        <div class="inner">
+            <img src="assets/img/svg/close-black.svg" width="32" height="32" alt="Close Menu" class="menu-close-img">
+            <ul class="nav-list flex center">
+                <li>
+                    <a href="javascript:void(0);" onclick="scrollToElem('#about'), menuClosing()">About us</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="scrollToElem('#projects'), menuClosing()">Offers</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="scrollToElem('#advantages'), menuClosing()">Why choose us</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="scrollToElem('#steps'), menuClosing()">Invest now</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="scrollToElem('#contact'), menuClosing()">Join us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-underlay"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
